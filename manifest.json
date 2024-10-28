@@ -1,15 +1,19 @@
 {
-    "manifest_version" : 3,
-    "name" : "Mooodz",
-    "version" :  "1.0.0" ,
-    "description" : "Motivational Music",
-    "icons" : {
-        "16": "moodz.jpeg",
-        "48": "moodz.jpeg",
-        "128": "moodz.jpeg"
-    },
-    "browser_action" : {
-        "default_icon" : "icon16.png",
-        "default_popup" : "popup.html"
+  "manifest_version": 3,
+  "name": "Mooodz",
+  "version": "1.0.0",
+  "description": "Motivational Music",
+  "icons": {
+    "16": "moodz.png",
+    "48": "moodz.png",
+    "128": "moodz.png"
+  },
+  
+    "action" : {
+    "default_title": "Click to view a popup",
+    "default_popup": "popup.html"
+  },
+    "background" : {
+        "service_worker" : "bg.js"
     }
- }
+}
