@@ -1,1 +1,141 @@
-\
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="manifest" href="/manifest.json" />
+    <link rel="stylesheet" href="/#style.css" />
+    <script src="/popup.js"></script>
+    <title>Mooodz</title>
+  </head>
+  <body>
+    
+  
+  
+    <h1 class="wr">Mooodz</h1>
+    <button id="startReminder">Start Water Reminder</button>
+    <button id="stopReminder">Stop Water Reminder</button>
+    
+    <iframe
+      id="ytplayer"
+      type="text/html"
+      width="400"
+      height="205"
+      src="https://www.youtube.com/embed/?listType=playlist&list=PLXzchC_LKdZ0uJgrPt9-Cicl8TeDSyLqF&autoplay=1&loop=1"
+      frameborder="0"
+      allowfullscreen
+      
+    >
+      ></body>
+      <!-- <iframe
+      width="560"
+      height="315"
+      src="https://www.youtube.com/embed/jfKfPfyJRdk?si=mxr3IIsyR3NbJC6g,13HGMUMkPFc?autoplay=1"
+      title="YouTube video player"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      referrerpolicy="strict-origin-when-cross-origin"
+      allowfullscreen -->
+      >
+    </iframe>
+    
+   
+    <!-- <div id="playerContainer">
+      <div id="player">
+        <video id="player"></video>
+      </div>
+    </div>
+    <button id="pipButton">Open Picture-in-Picture window</button>
+     -->
+
+
+<style>
+/* body {
+    font-family: Arial, sans-serif;
+    width: 200px;
+    text-align: center;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+} */
+
+h1 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+    
+}
+
+h2 {
+    font-size: 20px;
+    color: #555;
+    margin-top: 20px;
+}
+
+button {
+    background-color: #4CAF50; /* Green */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    margin: 5px;
+    width: 80%;
+}
+
+button:hover {
+    background-color: #45a049; /* Darker green */
+    transform: translateY(-2px);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+button:focus {
+    outline: none;
+}   
+
+.wr {
+  background-image: radial-gradient(circle, #2da0d4, #18a3d0, #00a6cb, #00a9c6, #00abbf, #39b1c7, #55b7ce, #6bbdd4, #99c7e2, #bfd3e9, #dce0ed, #f0f0f0);
+}
+body {
+  background-image: linear-gradient(to left top, #2da0d4, #18a3d0, #00a6cb, #00a9c6, #00abbf, #39b1c7, #55b7ce, #6bbdd4, #99c7e2, #bfd3e9, #dce0ed, #f0f0f0);
+</style>
+
+
+
+
+
+
+  </body>
+  <script pipButton.addEventListener("click", async () => {
+    const player = document.querySelector("#player");
+  
+    if (!document.pictureInPictureEnabled) {
+      console.error("Picture-in-Picture is not supported by this browser.");
+      return;
+    }
+  
+    if (!player) {
+      console.error("Player element not found.");
+      return;
+    }
+  
+    try {
+      if (document.pictureInPictureElement) {
+        // If already in Picture-in-Picture, exit it
+        await document.exitPictureInPicture();
+      } else {
+        // Request Picture-in-Picture on the video element
+        await player.requestPictureInPicture();
+      }
+    } catch (error) {
+      console.error("Error with Picture-in-Picture:", error);
+    }
+  }</script>
+</html>
+
